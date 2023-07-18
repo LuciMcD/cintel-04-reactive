@@ -42,6 +42,7 @@ flights_df = sns.load_dataset("flights")
 flights_df.to_excel(data_folder.joinpath("flights.xlsx"))
 flights_df.to_csv(data_folder.joinpath("flights.csv"))
 
+mtcars_df = sns.load_dataset("mtcars")
 mtcars_df = pd.read_csv(data_folder.joinpath("mtcars.csv"))
 mtcars_df.to_excel(data_folder.joinpath("mtcars.xlsx"))
 
