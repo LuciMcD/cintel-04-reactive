@@ -51,6 +51,7 @@ def get_mtcars_server_functions(input, output, session):
         """
 
         filtered_df = df[(df["mpg"] >= input_min) & (df["mpg"] <= input_max)]
+        
         hp_filter = df["hp"] <= input.MT_CARS_MAX_hp()
         df = df[hp_filter]
         # Set the reactive value
