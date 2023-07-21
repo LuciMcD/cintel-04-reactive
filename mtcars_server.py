@@ -54,7 +54,7 @@ def get_mtcars_server_functions(input, output, session):
         df = df[hp_filter]
         # Set the reactive value
         reactive_df.set(filtered_df)
-
+        hp = reactive.Value([hp_filter()])
     @output
     @render.text
     def mtcars_record_count_string():
